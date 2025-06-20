@@ -1,9 +1,12 @@
 // server.js
 const express = require("express");
+const cors    = require("cors");
 const fetch   = require("node-fetch");
 const { OAuth2Client } = require("google-auth-library");
 
 const app = express();
+// Allow CORS requests from your store domain
+app.use(cors({ origin: "https://buydaze.in", credentials: true }));
 app.use(express.json());
 
 const CLIENT_ID        = process.env.GOOGLE_CLIENT_ID;
