@@ -1,26 +1,32 @@
 {
-	"name": "google-one-tap",
-	"version": "1.0.6",
-	"description": "Google One Tap Login",
-	"main": "index.js",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/BurakGur/google-one-tap.git"
-	},
-	"keywords": [
-		"google one tap",
-		"google sign in",
-		"google sign up",
-		"react",
-		"vue"
-	],
-	"author": "Burak Gür <gurbrk@gmail.com>",
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/BurakGur/google-one-tap/issues"
-	},
-	"homepage": "https://github.com/BurakGur/google-one-tap#readme"
+  "name": "google-one-tap",
+  "version": "1.0.6",
+  "description": "Google One Tap Login",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "node-fetch": "^2.6.7",
+    "google-auth-library": "^8.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thisisomkumar/google-one-tap.git"
+  },
+  "keywords": [
+    "google one tap",
+    "google sign in",
+    "google sign up",
+    "react",
+    "vue"
+  ],
+  "author": "thisisomkumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thisisomkumar/google-one-tap/issues"
+  },
+  "homepage": "https://github.com/thisisomkumar/google-one-tap#readme"
 }
