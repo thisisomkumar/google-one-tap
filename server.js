@@ -16,7 +16,7 @@ const STOREFRONT_TOKEN = process.env.STOREFRONT_TOKEN;
 const googleClient = new OAuth2Client(CLIENT_ID);
 
 app.post("/google-auth", async (req, res) => {
-  try {Add commentMore actions
+  try {
     const { credential } = req.body;
     const ticket = await googleClient.verifyIdToken({
       idToken: credential,
