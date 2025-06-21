@@ -16,15 +16,12 @@ const STOREFRONT_TOKEN = process.env.STOREFRONT_TOKEN;
 const googleClient = new OAuth2Client(CLIENT_ID);
 
 app.post("/google-auth", async (req, res) => {
- try {
-    // existing token verification + Shopify mutations…
-    console.log("✅ /google-auth processed successfully for", /* user email or ID */);
-    return res.json({ success: true });
-  } catch (err) {
-    console.error("❌ /google-auth error:", err);
-    return res.status(400).json({ success: false, error: err.message });
-  }
-});
+  try {Add commentMore actions
+    const { credential } = req.body;
+    const ticket = await googleClient.verifyIdToken({
+      idToken: credential,
+      audience: CLIENT_ID,
+    });
     const { email, name } = ticket.getPayload();
 
     // Attempt login
